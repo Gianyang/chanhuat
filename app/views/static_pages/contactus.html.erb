@@ -1,2 +1,26 @@
-<h1>StaticPages#contactus</h1>
-<p>Find me in app/views/static_pages/contactus.html.erb</p>
+<% provide(:title, "Contact Us") %>
+<h1>Contact Us</h1>
+<form>
+  Name:<br>
+  <input type="text" name="name">
+  <br>
+  Email:<br>
+  <input type="text" name="email">
+  <br>
+  H/p no:<br>
+  <input type="text" name="handphone">
+  <br>
+  Enquiry:<br>
+  <input type="text" name="enquiry">
+</form>
+
+<%= form_for @person do |person_form| %>
+  Name: <%= person_form.text_field :name %>
+  Contact number: <%= person_form.text_field :contact_number %>
+  Email: <%= person_form.text_field :email %>
+  Enquiry: <%= person_form.text_field :enquiry %>
+<% end %>
+
+<head>
+  <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+</head>

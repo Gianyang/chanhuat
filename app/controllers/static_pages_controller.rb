@@ -2,14 +2,14 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def companyprofile
+  def profile
   end
 
-  def products
+  def product 
   end
-end
-end
 
   def contactus
+  	@person = Person.new
   end
 end
+
