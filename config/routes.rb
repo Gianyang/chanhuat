@@ -1,11 +1,13 @@
 Webapps::Application.routes.draw do
 	
-  root 'static_pages#home'
+  get 'static_pages/gallery'
 
-  get 'static_pages/profile'
+  root 'static_pages#home' 
 
-  get 'static_pages/product'
+  get 'aboutus' => 'static_pages#aboutus'
 
-  get 'static_pages/contactus'
+  get 'product' => 'static_pages#product'
+
+  get 'contactus' => 'static_pages#contactus'
 
 end
